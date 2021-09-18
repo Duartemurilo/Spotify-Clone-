@@ -4,11 +4,10 @@ import { useDataLayerValue } from '../DataLayer'
 import { UseProtectPage } from '../Hooks/UseProtectPage'
 import { loginUrl, getToken } from '../Services/Link'
 import { LoginContainer } from '../Styles/Pages/LoginPageStyles'
-import SpotifyWebApi from 'spotify-web-api-js'
-
-const spotify = new SpotifyWebApi()
+import { AuthContext } from '../AuthContext'
 
 function LoginPage() {
+  const { spotify } = React.useContext(AuthContext)
   const [{ token }, dispatch] = useDataLayerValue()
 
   UseProtectPage(token)
@@ -27,12 +26,12 @@ function LoginPage() {
 
       spotify.setAccessToken(_token)
     }
-  }, [dispatch, token])
+  }, [dispatch, token, spotify])
 
   return (
     <LoginContainer>
       <img src={Logo} alt="Logo" />
-      <a href={loginUrl}>Faca login pelo spotify</a>
+      <a href={loginUrl}>Faça login pelo spotify</a>
     </LoginContainer>
   )
 }
