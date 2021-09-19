@@ -42,7 +42,6 @@ function Footer() {
           <Grid item xs>
             <Slider style={{ color: '#1ed15e' }} />
           </Grid>
-          <p>tempo</p>
         </Grid>
       </FooterRight>
     </FooterContainer>
