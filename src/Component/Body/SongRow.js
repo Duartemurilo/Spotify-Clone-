@@ -1,10 +1,18 @@
 import React from 'react'
+import { AuthContext } from '../../AuthContext'
 import { SongRowContainer, SongRowTrack } from '../../Styles/Component/Body/SongRow.Styles'
 
 function SongRow({ track }) {
+  const { setCurrentTrack, setcurrenFooter } = React.useContext(AuthContext)
+
+  const handleChoseenTrack = () => {
+    setCurrentTrack(track)
+    setcurrenFooter(true)
+  }
+
   return (
     <SongRowContainer>
-      <SongRowTrack>
+      <SongRowTrack onClick={() => handleChoseenTrack()}>
         <img src={track?.album.images[0].url} alt="" />
 
         <div>

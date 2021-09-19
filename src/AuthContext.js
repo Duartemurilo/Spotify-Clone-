@@ -6,9 +6,21 @@ export const AuthContext = React.createContext([])
 export const AuthProvider = (props) => {
   const spotify = new SpotifyWebApi()
   const [currentPlaylist, setCurrentPlaylist] = useState('4DarFQlBxRgREKobXciazO')
+  const [currentTrack, setCurrentTrack] = useState({})
+  const [currentFooter, setcurrenFooter] = useState(false)
 
   return (
-    <AuthContext.Provider value={{ spotify, setCurrentPlaylist, currentPlaylist }}>
+    <AuthContext.Provider
+      value={{
+        spotify,
+        setCurrentPlaylist,
+        currentPlaylist,
+        currentTrack,
+        setCurrentTrack,
+        currentFooter,
+        setcurrenFooter,
+      }}
+    >
       {props.children}
     </AuthContext.Provider>
   )

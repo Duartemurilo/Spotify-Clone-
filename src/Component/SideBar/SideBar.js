@@ -24,7 +24,6 @@ function SideBar({ token }) {
   }, [dispatch, spotify, token])
 
   const handleCurrentId = (id) => {
-    console.log(id)
     setCurrentPlaylist(id)
   }
 

@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HeaderContainer, HeaderLeft, HeaderRight, InputSearch } from '../../Styles/Component/Body/HeaderStyles'
 import SearchIcon from '@material-ui/icons/Search'
 import { Avatar } from '@material-ui/core'
 import { useDataLayerValue } from '../../DataLayer'
+import { AuthContext } from '../../AuthContext'
 
-function Header() {
-  const [{ user }] = useDataLayerValue()
+function Header({ token }) {
+  const [{ user }, dispatch] = useDataLayerValue()
+  const { spotify } = React.useContext(AuthContext)
+
+  useEffect(() => {
+    if (token) {
+      spotify.getMe().then((user) => {
+        dispatch({
+          type: 'SET_USER',
+          user: user,
+        })
+      })
+    }
+  }, [dispatch, spotify, token])
 
   return (
     <HeaderContainer>

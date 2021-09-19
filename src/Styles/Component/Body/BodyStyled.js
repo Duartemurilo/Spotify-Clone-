@@ -32,12 +32,13 @@ export const BodyInfoText = styled.div`
 `
 export const BodySongs = styled.div`
   margin: 20px -30px;
-  margin-left: 20px;
-  width: 80%;
+  margin-left: 1px;
+  width: 90%;
 `
 
 export const BodyIcons = styled.div`
   display: flex;
   align-items: center;
   width: 80%;
+  margin-left: 30px;
 `

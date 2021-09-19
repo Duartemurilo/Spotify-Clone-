@@ -27,7 +27,7 @@ function Body({ token }) {
 
   return (
     <BodyContainer>
-      <Header spotify={spotify} />
+      <Header spotify={spotify} token={token} />
 
       <Banner />
 
@@ -41,8 +41,8 @@ function Body({ token }) {
         </BodyIcons>
 
         {discover_weekly ? (
-          discover_weekly?.tracks.items.map((item) => {
-            return <SongRow track={item.track} />
+          discover_weekly?.tracks.items.map((playlist) => {
+            return <SongRow key={playlist.id} track={playlist.track} />
           })
         ) : (
           <h1>Essa Playlisy não possui musica</h1>
