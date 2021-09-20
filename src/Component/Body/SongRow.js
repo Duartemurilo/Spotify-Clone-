@@ -11,8 +11,8 @@ function SongRow({ track }) {
   }
 
   return (
-    <SongRowContainer>
-      <SongRowTrack onClick={() => handleChoseenTrack()}>
+    <SongRowContainer onClick={() => handleChoseenTrack()}>
+      <SongRowTrack>
         <img src={track?.album.images[0].url} alt="" />
 
         <div>

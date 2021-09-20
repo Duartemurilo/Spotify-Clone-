@@ -5,7 +5,7 @@ export const AuthContext = React.createContext([])
 
 export const AuthProvider = (props) => {
   const spotify = new SpotifyWebApi()
-  const [currentPlaylist, setCurrentPlaylist] = useState('4DarFQlBxRgREKobXciazO')
+  const [currentPlaylist, setCurrentPlaylist] = useState('37i9dQZEVXcDsnG8902Yis')
   const [currentTrack, setCurrentTrack] = useState({})
   const [currentFooter, setcurrenFooter] = useState(false)
 

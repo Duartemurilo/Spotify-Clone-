@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BodyContainer, BodyIcons, BodySongs } from '../../Styles/Component/Body/BodyStyled'
+import { BodyContainer, BodyIcons, BodySongs, EmpityBody } from '../../Styles/Component/Body/BodyStyled'
 import { useDataLayerValue } from '../../DataLayer'
 import Header from './Header'
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
@@ -45,7 +45,11 @@ function Body({ token }) {
             return <SongRow key={playlist.id} track={playlist.track} />
           })
         ) : (
-          <h1>Essa Playlisy não possui musica</h1>
+          <EmpityBody>
+            <p>...</p>
+            <hr />
+            <h1>Essa Playlist não possui musica</h1>
+          </EmpityBody>
         )}
       </BodySongs>
     </BodyContainer>

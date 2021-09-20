@@ -12,6 +12,7 @@ function LoginPage() {
 
   UseProtectPage(token)
 
+  console.log(token)
   useEffect(() => {
     const hash = getToken()
     window.location.hash = ''

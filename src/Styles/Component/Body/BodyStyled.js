@@ -42,3 +42,31 @@ export const BodyIcons = styled.div`
   width: 80%;
   margin-left: 30px;
 `
+export const EmpityBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  width: 79vw;
+  height: 60vh;
+  margin-right: 20px;
+  p {
+    font-size: 40px;
+  }
+  hr {
+    background-color: white;
+    width: 100%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+`
+export const EmpityBanner = styled.div`
+  margin: 0%, 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vw;
+  width: 15vw;
+  background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
+  margin-right: 1vw;
+`
