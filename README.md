@@ -34,7 +34,7 @@
 <h3>WEB</h3>
 
 <p align="center">
- <img widht = '500'  src = "./src/Assents/gravaçãoSpotify.gif"/>
+ <img widht = '500'  src = "./src/Assents/gravacaotelaGif.gif"/>
 </p>
 
 <h1 id= 'executar'>🚀  Como executar o projeto</h1>
