@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakPoints from '../../../Constants/breakPoints'
 
 export const SideBarContainer = styled.div`
   display: flex;
@@ -27,4 +28,19 @@ export const SideBarContainer = styled.div`
     object-fit: cover;
     margin-bottom: 1vh;
   }
+  ${`@media only screen and ${breakPoints.device.cel}{
+  position: absolute;
+  min-width: 250px;
+
+  p{
+      font-size:16px;
+      
+    }
+}`}
+`
+
+export const ContainerArrowBack = styled.div`
+  display: flex;
+  gap: 0px;
+  align-items: center;
 `

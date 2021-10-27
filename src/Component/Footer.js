@@ -9,9 +9,11 @@ import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay'
 import VolumeDownIcon from '@material-ui/icons/VolumeDown'
 import { FooterCenter, FooterContainer, FooterLeft, FooterRight } from '../Styles/Component/FooterStyles'
 import { AuthContext } from '../AuthContext'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 function Footer() {
   const { currentTrack } = React.useContext(AuthContext)
+  const isActive = useMediaQuery('(max-width: 450px)')
 
   return (
     <FooterContainer>
@@ -24,25 +26,37 @@ function Footer() {
       </FooterLeft>
 
       <FooterCenter>
-        <ShuffleIcon style={{ color: '#1ed15e', cursor: 'pointer', fontSize: '30px' }} />
-        <SkipPreviousOutlinedIcon style={{ cursor: 'pointer', fontSize: '30px' }} />
-        <PlayCircleOutlineOutlinedIcon style={{ cursor: 'pointer', fontSize: '40px' }} />
-        <SkipNextOutlinedIcon style={{ cursor: 'pointer', fontSize: '30px' }} />
-        <RepeatIcon style={{ color: '#1ed15e', fontSize: '30px' }} />
+        {isActive ? (
+          <PlayCircleOutlineOutlinedIcon style={{ cursor: 'pointer', fontSize: '40px' }} />
+        ) : (
+          <>
+            <ShuffleIcon style={{ color: '#1ed15e', cursor: 'pointer', fontSize: '30px' }} />
+            <SkipPreviousOutlinedIcon style={{ cursor: 'pointer', fontSize: '30px' }} />
+            <PlayCircleOutlineOutlinedIcon style={{ cursor: 'pointer', fontSize: '40px' }} />
+            <SkipNextOutlinedIcon style={{ cursor: 'pointer', fontSize: '30px' }} />
+            <RepeatIcon style={{ color: '#1ed15e', fontSize: '30px' }} />
+          </>
+        )}
       </FooterCenter>
 
       <FooterRight>
-        <Grid container spacing={2}>
-          <Grid item>
-            <PlaylistPlayIcon />
-          </Grid>
-          <Grid item>
-            <VolumeDownIcon />
-          </Grid>
-          <Grid item xs>
-            <Slider style={{ color: '#1ed15e' }} />
-          </Grid>
-        </Grid>
+        {isActive ? (
+          <></>
+        ) : (
+          <>
+            <Grid container spacing={2}>
+              <Grid item>
+                <PlaylistPlayIcon />
+              </Grid>
+              <Grid item>
+                <VolumeDownIcon />
+              </Grid>
+              <Grid item xs>
+                <Slider style={{ color: '#1ed15e' }} />
+              </Grid>
+            </Grid>
+          </>
+        )}
       </FooterRight>
     </FooterContainer>
   )

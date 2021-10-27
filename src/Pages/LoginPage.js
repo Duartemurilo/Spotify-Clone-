@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Logo } from '../ Constants/LogoSpotify'
+import { Logo } from '../Constants/LogoSpotify'
 import { useDataLayerValue } from '../DataLayer'
 import { UseProtectPage } from '../Hooks/UseProtectPage'
 import { loginUrl, getToken } from '../Services/Link'
@@ -12,7 +12,6 @@ function LoginPage() {
 
   UseProtectPage(token)
 
-  console.log(token)
   useEffect(() => {
     const hash = getToken()
     window.location.hash = ''
@@ -31,8 +30,16 @@ function LoginPage() {
 
   return (
     <LoginContainer>
+      <div className="Login">
+        <h4>Email:</h4> <p>projetosmuzidev@gmail.com</p>
+      </div>
+      <div className="Login2">
+        <h4>Senha:</h4> <p>muzidev123</p>
+      </div>
       <img src={Logo} alt="Logo" />
-      <a href={loginUrl}>Faça login pelo spotify</a>
+      <div>
+        <a href={loginUrl}>Faça login pelo spotify</a>
+      </div>
     </LoginContainer>
   )
 }

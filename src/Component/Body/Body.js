@@ -9,9 +9,8 @@ import SongRow from './SongRow'
 import { AuthContext } from '../../AuthContext'
 import Banner from './Banner'
 
-function Body({ token }) {
+function Body({ token, setCurrentSideBar, currentSideBar }) {
   const { spotify, currentPlaylist } = React.useContext(AuthContext)
-
   const [{ discover_weekly }, dispatch] = useDataLayerValue()
 
   useEffect(() => {
@@ -27,7 +26,7 @@ function Body({ token }) {
 
   return (
     <BodyContainer>
-      <Header spotify={spotify} token={token} />
+      <Header spotify={spotify} token={token} setCurrentSideBar={setCurrentSideBar} currentSideBar={currentSideBar} />
 
       <Banner />
 

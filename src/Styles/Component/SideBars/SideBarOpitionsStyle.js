@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakPoints from '../../../Constants/breakPoints'
 
 export const Options = styled.div`
   color: grey;
@@ -17,4 +18,14 @@ export const Options = styled.div`
   :hover {
     color: white;
   }
+  ${`@media only screen and ${breakPoints.device.cel}{
+    p{
+   
+      font-size:16px; 
+    
+    }
+  h4{
+      font-size:16px; 
+    }
+}`}
 `

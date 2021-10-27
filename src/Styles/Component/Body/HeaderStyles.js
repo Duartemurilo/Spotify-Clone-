@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakPoints from '../../../Constants/breakPoints'
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -10,6 +11,10 @@ export const HeaderContainer = styled.div`
   width: 90%;
   margin-top: 30px;
   margin-left: 30px;
+
+  ${`@media only screen and ${breakPoints.device.cel}{
+  width: 88%;
+  }`}
 `
 
 export const HeaderLeft = styled.div`
