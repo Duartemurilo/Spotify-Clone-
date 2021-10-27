@@ -14,7 +14,7 @@
 
 <h1>💻  Sobre o projeto</h1>
 
-<p>Como mais um amante da musica e por ser fascinado pela facilidade e qualidade que o spotify nos disponibiliza, tive a ideia de fazer um clone do spotify  que tem como de desenvolver abilidades tecnicas, pricipalmente manipulação da API disponibilizada pelo própio spotify.</p>
+<p>Como um amante da música e por ser fascinado pela facilidade e qualidade que o spotify nos disponibiliza, tive a ideia de fazer um clone do spotify que tem como de desenvolver habilidades técnicas, principalmente manipulação da API disponibilizada pelo próprio spotify.</p>
 
 <h1 id = 'tec'>🛠 Tecnologias </h1
   
