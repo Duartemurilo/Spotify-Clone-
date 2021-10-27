@@ -45,11 +45,9 @@
 
 
 <p>Importante:</p>
-<p> Entre no spotify(WEB) e faça login com esse usuario email: projetosmuzidev@gmail.com senha:muzidev123 , após o login você poderá acessar o spotify(Clone)</p>
+<p> Faça login com esse usuario email: projetosmuzidev@gmail.com senha:muzidev123 , após o login você poderá acessar o spotify(Clone)</p>
  
- <p align="center">
- <img widht = '500'  src = "./src/Assents/gravacaoExemploGif.gif"/>
-</p>
+
 
 
 <h1>🧭 Rodando a aplicação web (Frontend)</h1>
